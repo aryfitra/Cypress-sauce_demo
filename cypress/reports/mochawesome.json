@@ -1,0 +1,87 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-08T18:55:52.470Z",
+    "end": "2023-07-08T18:55:52.537Z",
+    "duration": 67,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f83fd61b-be5e-4199-a3f6-70808a19524f",
+      "title": "",
+      "fullFile": "cypress/integration/dashboard.ts",
+      "file": "cypress/integration/dashboard.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test counter items cart",
+          "fullTitle": "Test counter items cart",
+          "timedOut": null,
+          "duration": 38,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "__awaiter(void 0, void 0, void 0, function* () {\n    loginPage.login(globalObjects.URL, 'standard_user', 'secret_sauce');\n    dashboardPage.ACsauceLabsBackpack();\n    cy.get(dashboardPage.cartCounter).should('be.visible').and('have.text', '1');\n    dashboardPage.clickCart();\n    cy.contains('Sauce Labs Backpack').should('be.visible');\n    cy.get(cartPage.elPrice).should('contain', '$29.99');\n    cartPage.ContinueShopping();\n    dashboardPage.ACsauceLabsFleece();\n    dashboardPage.clickCart();\n    cy.contains('Sauce Labs Fleece Jacket').should('be.visible');\n    cy.get(cartPage.elPrice).should('contain', '$49.99');\n    cy.get(dashboardPage.removeButton_sauceLabsBackpack).click();\n    cy.get(dashboardPage.cartCounter).should('be.visible').and('have.text', '1');\n})",
+          "err": {},
+          "uuid": "8017cd75-6b52-4bf4-b53d-528e4defe949",
+          "parentUUID": "f83fd61b-be5e-4199-a3f6-70808a19524f",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "8017cd75-6b52-4bf4-b53d-528e4defe949"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 38,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
